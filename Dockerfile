@@ -9,8 +9,8 @@ ENV NODE_OPTIONS="--max-old-space-size=512"
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies (npm ci is faster and more reliable)
-RUN npm ci --prefer-offline
+# Install dependencies
+RUN npm install --production=false
 
 # Copy source code
 COPY . .
