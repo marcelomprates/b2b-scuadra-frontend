@@ -13,6 +13,15 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validar senha
+    const VALID_PASSWORD = 'Scuadr@$x1';
+    
+    if (password !== VALID_PASSWORD) {
+      alert('Senha incorreta. Tente novamente.');
+      return;
+    }
+    
     setLoading(true);
     // Simulate API call to auth-service
     setTimeout(() => {
