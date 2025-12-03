@@ -1,0 +1,6 @@
+# Ignore deployment scripts from git if needed
+# build-and-push.ps1
+# deploy.sh
+
+# Local build artifacts (if building locally for testing)
+*.log
